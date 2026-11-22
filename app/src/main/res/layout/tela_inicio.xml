@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FlzRace.TextoSec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bem-vindo de volta," />
+
+                <TextView
+                    android:id="@+id/txtPiloto"
+                    style="@style/FlzRace.Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PILOTO" />
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAvatarInicio"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@color/flz_laranja_suave"
+                android:contentDescription="Abrir perfil"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/FlzRace.FormaCirculo"
+                app:strokeColor="@color/flz_laranja"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/FlzRace.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FlzRace.Secao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEUS RECORDES" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/FlzRace.TextoSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 a 100 km/h" />
+
+                        <TextView
+                            android:id="@+id/txtRecorde0a100"
+                            style="@style/FlzRace.Valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/FlzRace.TextoSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Velocidade máxima" />
+
+                        <TextView
+                            android:id="@+id/txtRecordeMax"
+                            style="@style/FlzRace.Valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:shadowColor="@color/flz_laranja"
+                            android:text="—"
+                            android:textColor="@color/flz_laranja" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnIniciar"
+            style="@style/FlzRace.Botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="INICIAR MEDIÇÃO"
+            app:icon="@drawable/ic_acelerar"
+            app:iconGravity="textStart" />
+
+        <TextView
+            style="@style/FlzRace.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="ÚLTIMAS MEDIÇÕES" />
+
+        <TextView
+            android:id="@+id/txtHistoricoVazio"
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Nenhuma medição ainda. Bora acelerar!" />
+
+        <LinearLayout
+            android:id="@+id/listaHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

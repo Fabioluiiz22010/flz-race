@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/resultado"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flz_fundo"
+    tools:context=".ResultadoActivity">
+    <com.example.flzrace.GradeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:id="@+id/txtTituloResultado"
+                    style="@style/FlzRace.Secao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESULTADO · 0 A 100 KM/H"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txtNovoRecorde"
+                    style="@style/FlzRace.FonteDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_aviso"
+                    android:letterSpacing="0.15"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="6dp"
+                    android:text="NOVO RECORDE PESSOAL"
+                    android:textColor="@color/flz_laranja"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtPrincipal"
+                    style="@style/FlzRace.FonteDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:shadowColor="@color/flz_ciano"
+                    android:shadowRadius="24"
+                    android:text="0,00 s"
+                    android:textColor="@color/flz_ciano"
+                    android:textSize="64sp" />
+
+                <TextView
+                    android:id="@+id/txtComparacao"
+                    style="@style/FlzRace.TextoSec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quadrado"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            style="@style/FlzRace.TextoSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Velocidade máxima" />
+
+                        <TextView
+                            android:id="@+id/txtResMax"
+                            style="@style/FlzRace.ValorPequeno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quadrado"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+                        <TextView
+                            style="@style/FlzRace.TextoSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distância" />
+
+                        <TextView
+                            android:id="@+id/txtResDistancia"
+                            style="@style/FlzRace.ValorPequeno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quadrado"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            style="@style/FlzRace.TextoSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Velocidade média" />
+
+                        <TextView
+                            android:id="@+id/txtResMedia"
+                            style="@style/FlzRace.ValorPequeno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quadrado"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+                        <TextView
+                            style="@style/FlzRace.TextoSec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tempo total" />
+
+                        <TextView
+                            android:id="@+id/txtResTempo"
+                            style="@style/FlzRace.ValorPequeno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/FlzRace.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:contentPadding="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/FlzRace.Secao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VELOCIDADE × TEMPO"
+                            android:textSize="11sp" />
+
+                        <com.example.flzrace.GraficoVelocidadeView
+                            android:id="@+id/grafico"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="Gráfico da velocidade ao longo do tempo" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/faixaValidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+                    <ImageView
+                        android:id="@+id/imgValidade"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_check"
+                        app:tint="@color/flz_ciano" />
+
+                    <TextView
+                        android:id="@+id/txtValidade"
+                        style="@style/FlzRace.Texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="16dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnviarRanking"
+                style="@style/FlzRace.Botao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ENVIAR PARA O RANKING"
+                app:icon="@drawable/ic_ranking"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNovaMedicao"
+                style="@style/FlzRace.Botao.Contorno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="NOVA MEDIÇÃO" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConcluir"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Voltar ao início"
+                android:textColor="@color/flz_texto_2"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

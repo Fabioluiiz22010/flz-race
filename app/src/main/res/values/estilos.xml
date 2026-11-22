@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="FlzRace" />
+
+    <style name="FlzRace.FonteDisplay">
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="FlzRace.FonteTexto">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="FlzRace.Titulo" parent="FlzRace.FonteDisplay">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/flz_texto</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="FlzRace.Secao" parent="FlzRace.FonteDisplay">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/flz_texto_2</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <style name="FlzRace.Texto" parent="FlzRace.FonteTexto">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/flz_texto</item>
+    </style>
+
+    <style name="FlzRace.TextoSec" parent="FlzRace.FonteTexto">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/flz_texto_3</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="FlzRace.Valor" parent="FlzRace.FonteDisplay">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/flz_ciano</item>
+        <item name="android:shadowColor">@color/flz_ciano</item>
+        <item name="android:shadowRadius">14</item>
+    </style>
+
+    <style name="FlzRace.ValorPequeno" parent="FlzRace.FonteDisplay">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/flz_texto</item>
+    </style>
+
+    <style name="FlzRace.FormaBotao">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="FlzRace.FormaCard">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+    </style>
+
+    <style name="FlzRace.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/flz_card</item>
+        <item name="strokeColor">@color/flz_ciano_borda</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="shapeAppearance">@style/FlzRace.FormaCard</item>
+    </style>
+
+    <style name="FlzRace.Botao" parent="Widget.Material3.Button">
+        <item name="android:minHeight">60dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/flz_fundo</item>
+        <item name="backgroundTint">@color/flz_ciano</item>
+        <item name="iconTint">@color/flz_fundo</item>
+        <item name="shapeAppearance">@style/FlzRace.FormaBotao</item>
+    </style>
+
+    <style name="FlzRace.Botao.Contorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">60dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/flz_ciano</item>
+        <item name="strokeColor">@color/flz_ciano_borda</item>
+        <item name="shapeAppearance">@style/FlzRace.FormaBotao</item>
+    </style>
+
+    <style name="FlzRace.FormaCirculo">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="FlzRace.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/flz_ciano</item>
+        <item name="boxBackgroundColor">@color/flz_card</item>
+        <item name="hintTextColor">@color/flz_ciano</item>
+        <item name="android:textColorHint">@color/flz_texto_2</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+        <item name="boxCornerRadiusBottomStart">4dp</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
+    </style>
+
+    <style name="FlzRace.IndicadorNav" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/flz_ciano_suave</item>
+    </style>
+</resources>

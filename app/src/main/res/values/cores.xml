@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="flz_fundo">#05070D</color>
+    <color name="flz_card">#E60A121E</color>
+    <color name="flz_trilho">#1A2533</color>
+
+    <color name="flz_ciano">#00E5FF</color>
+    <color name="flz_ciano_claro">#7FF3FF</color>
+    <color name="flz_ciano_borda">#5900E5FF</color>
+    <color name="flz_ciano_suave">#2600E5FF</color>
+    <color name="flz_ciano_grade">#1000E5FF</color>
+
+    <color name="flz_laranja">#FF8A00</color>
+    <color name="flz_laranja_borda">#B3FF8A00</color>
+    <color name="flz_laranja_suave">#1FFF8A00</color>
+
+    <color name="flz_roxo">#C084FC</color>
+    <color name="flz_roxo_borda">#99C084FC</color>
+    <color name="flz_roxo_suave">#1AC084FC</color>
+
+    <color name="flz_texto">#E8F7FF</color>
+    <color name="flz_texto_2">#8FA6B8</color>
+    <color name="flz_texto_3">#A9BDCC</color>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flz_fundo"
+    tools:context=".MainActivity">
+    <com.example.flzrace.GradeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <include
+                android:id="@+id/telaInicio"
+                layout="@layout/tela_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/telaAcelerar"
+                layout="@layout/tela_acelerar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/telaRanking"
+                layout="@layout/tela_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/telaPerfil"
+                layout="@layout/tela_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/flz_ciano_borda" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navegacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/flz_fundo"
+            app:itemActiveIndicatorStyle="@style/FlzRace.IndicadorNav"
+            app:itemIconTint="@color/nav_item"
+            app:itemTextColor="@color/nav_item"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_navegacao" />
+    </LinearLayout>
+</FrameLayout>

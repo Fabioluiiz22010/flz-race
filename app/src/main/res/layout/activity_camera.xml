@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".CameraActivity">
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imgCapturada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:contentDescription="Foto do carro capturada"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/moldura"
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_moldura" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btnVoltarCamera"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_quadrado"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_voltar"
+            app:tint="@color/flz_texto" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                style="@style/FlzRace.FonteDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.12"
+                android:text="FOTO DO CARRO"
+                android:textColor="@color/flz_texto"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtDicaCamera"
+                style="@style/FlzRace.TextoSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enquadre o carro inteiro na moldura" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/grupoCaptura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#99000000"
+        android:paddingVertical="24dp">
+        <ImageButton
+            android:id="@+id/btnCapturar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_botao_captura"
+            android:contentDescription="Tirar foto" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/grupoConfirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#CC000000"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:visibility="gone">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTirarOutra"
+            style="@style/FlzRace.Botao.Contorno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:text="TIRAR OUTRA" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUsarFoto"
+            style="@style/FlzRace.Botao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="USAR FOTO" />
+    </LinearLayout>
+</FrameLayout>

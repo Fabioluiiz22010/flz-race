@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.FLZRACE" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/flz_ciano</item>
+        <item name="colorOnPrimary">@color/flz_fundo</item>
+        <item name="colorSecondary">@color/flz_laranja</item>
+        <item name="colorOnSecondary">@color/flz_fundo</item>
+        <item name="colorTertiary">@color/flz_roxo</item>
+        <item name="android:colorBackground">@color/flz_fundo</item>
+        <item name="colorSurface">@color/flz_fundo</item>
+        <item name="colorOnSurface">@color/flz_texto</item>
+        <item name="colorOnSurfaceVariant">@color/flz_texto_2</item>
+        <item name="colorOutline">@color/flz_ciano_borda</item>
+        <item name="android:windowBackground">@color/flz_fundo</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

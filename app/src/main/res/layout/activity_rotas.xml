@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rotas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flz_fundo"
+    tools:context=".RotasActivity">
+    <com.example.flzrace.GradeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnVoltarRotas"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_quadrado"
+                android:contentDescription="Voltar"
+                android:src="@drawable/ic_voltar"
+                app:tint="@color/flz_texto" />
+
+            <TextView
+                style="@style/FlzRace.Titulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="TRAJETO A→B"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/faixaDemoRotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_demo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_demo"
+                app:tint="@color/flz_roxo" />
+
+            <TextView
+                style="@style/FlzRace.Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Modo demonstração ligado: o trajeto será simulado."
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCriarRota"
+            style="@style/FlzRace.Botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="CRIAR ROTA"
+            app:backgroundTint="@color/flz_laranja"
+            app:icon="@drawable/ic_bandeira"
+            app:iconGravity="textStart" />
+
+        <TextView
+            style="@style/FlzRace.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="ROTAS DA COMUNIDADE" />
+
+        <TextView
+            android:id="@+id/txtRotasInfo"
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Toque numa rota para correr nela." />
+
+        <ProgressBar
+            android:id="@+id/progressoRotas"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:indeterminateTint="@color/flz_laranja"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtRotasVazio"
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/listaRotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

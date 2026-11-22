@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boasVindas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flz_fundo"
+    tools:context=".BoasVindasActivity">
+    <com.example.flzrace.GradeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="32dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/FlzRace.FonteDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/flz_ciano"
+                    android:shadowRadius="18"
+                    android:text="FLZ "
+                    android:textColor="@color/flz_ciano"
+                    android:textSize="44sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    style="@style/FlzRace.FonteDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/flz_laranja"
+                    android:shadowRadius="18"
+                    android:text="RACE"
+                    android:textColor="@color/flz_laranja"
+                    android:textSize="44sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@color/flz_ciano" />
+
+            <TextView
+                android:id="@+id/txtSlogan"
+                style="@style/FlzRace.TextoSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.05"
+                android:text="Corra. Vença. Domine o ranking."
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/grupoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/FlzRace.TextoSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Entre com sua conta Google para salvar seus recordes e aparecer no ranking online."
+                    android:textSize="16sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoogle"
+                    style="@style/FlzRace.Botao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="ENTRAR COM GOOGLE"
+                    app:icon="@drawable/ic_perfil"
+                    app:iconGravity="textStart" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressoEntrada"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:indeterminateTint="@color/flz_ciano"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/grupoCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/btnFoto"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:clickable="true"
+                    android:contentDescription="Tirar foto do carro"
+                    android:focusable="true">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgFotoCarro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/flz_card"
+                        android:importantForAccessibility="no"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/FlzRace.FormaCirculo"
+                        app:strokeColor="@color/flz_ciano"
+                        app:strokeWidth="2dp" />
+
+                    <ImageView
+                        android:id="@+id/icoCamera"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/flz_ciano" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/FlzRace.FonteDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="FOTO DO CARRO"
+                        android:textColor="@color/flz_texto"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        style="@style/FlzRace.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toque para tirar. Ela vira sua foto de perfil e aparece no ranking." />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoNome"
+                style="@style/FlzRace.Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Nome do piloto">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:maxLength="20"
+                    android:textColor="@color/flz_texto"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoCarro"
+                style="@style/FlzRace.Campo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Modelo do carro (ex.: Golf GTI 2015)">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCarro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:maxLength="30"
+                    android:textColor="@color/flz_texto"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/caixaAviso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_aviso"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_alerta"
+                        app:tint="@color/flz_laranja" />
+
+                    <TextView
+                        style="@style/FlzRace.FonteDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:letterSpacing="0.1"
+                        android:text="APENAS EM LOCAIS FECHADOS"
+                        android:textColor="@color/flz_laranja"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/FlzRace.Texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Faça medições somente em pistas, autódromos ou áreas fechadas ao trânsito. Nunca em vias públicas."
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/chkAviso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Li e aceito a responsabilidade"
+                    android:textColor="@color/flz_texto"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/flz_laranja" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEntrar"
+                style="@style/FlzRace.Botao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="ENTRAR NA PISTA" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@color/flz_card"
+    android:gravity="center_vertical"
+    android:minHeight="48dp"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/barra"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="@color/flz_ciano" />
+
+    <TextView
+        android:id="@+id/txtTipo"
+        style="@style/FlzRace.FonteDisplay"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/flz_ciano"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        style="@style/FlzRace.Texto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtValor"
+        style="@style/FlzRace.FonteDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:textColor="@color/flz_texto"
+        android:textSize="15sp" />
+</LinearLayout>

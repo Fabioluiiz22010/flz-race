@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/criarRota"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flz_fundo"
+    android:orientation="vertical"
+    tools:context=".CriarRotaActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVoltarCriar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_quadrado"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_voltar"
+            app:tint="@color/flz_texto" />
+
+        <TextView
+            style="@style/FlzRace.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="CRIAR ROTA A→B"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/txtDicaMapa"
+            style="@style/FlzRace.Texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CC05070D"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Toque no mapa para marcar a LARGADA (A)"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="#99000000"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="© OpenStreetMap contributors, © CARTO"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/flz_ciano" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campoNomeRota"
+            style="@style/FlzRace.Campo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome da rota (ex.: Circuito Interno)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNomeRota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:maxLength="30"
+                android:textColor="@color/flz_texto"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/FlzRace.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="RAIO DE CHEGADA"
+            android:textSize="11sp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/grupoRaio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:checkedButton="@id/raio25"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/raio15"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="15 m"
+                android:textColor="@color/raio_texto"
+                app:backgroundTint="@color/raio_fundo"
+                app:strokeColor="@color/raio_texto" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/raio25"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="25 m"
+                android:textColor="@color/raio_texto"
+                app:backgroundTint="@color/raio_fundo"
+                app:strokeColor="@color/raio_texto" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/raio50"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50 m"
+                android:textColor="@color/raio_texto"
+                app:backgroundTint="@color/raio_fundo"
+                app:strokeColor="@color/raio_texto" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/txtDistanciaRota"
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Distância: marque A e B no mapa" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLimparRota"
+                style="@style/FlzRace.Botao.Contorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="LIMPAR" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPublicarRota"
+                style="@style/FlzRace.Botao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="PUBLICAR ROTA"
+                app:backgroundTint="@color/flz_laranja" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

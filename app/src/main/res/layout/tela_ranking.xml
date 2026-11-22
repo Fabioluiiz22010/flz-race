@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/FlzRace.Titulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RANKING" />
+
+            <ImageButton
+                android:id="@+id/btnAtualizarRanking"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_quadrado"
+                android:contentDescription="Atualizar ranking"
+                android:src="@drawable/ic_atualizar"
+                app:tint="@color/flz_ciano" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/aba0a100"
+                style="@style/FlzRace.Botao.Contorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="44dp"
+                android:text="0 A 100"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/abaVmax"
+                style="@style/FlzRace.Botao.Contorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_weight="1"
+                android:minHeight="44dp"
+                android:text="VEL. MÁX"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/abaRotas"
+                style="@style/FlzRace.Botao.Contorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="44dp"
+                android:text="ROTAS"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtRankingSub"
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <ProgressBar
+            android:id="@+id/progressoRanking"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:indeterminateTint="@color/flz_ciano"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtRankingVazio"
+            style="@style/FlzRace.TextoSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/listaRanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="96dp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/barraVoce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_aviso"
+        android:gravity="center_vertical"
+        android:minHeight="60dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+        <TextView
+            android:id="@+id/txtVocePosicao"
+            style="@style/FlzRace.FonteDisplay"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textColor="@color/flz_laranja"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtVoceNome"
+                style="@style/FlzRace.Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Você" />
+
+            <TextView
+                android:id="@+id/txtVoceInfo"
+                style="@style/FlzRace.TextoSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFB566" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVoceValor"
+            style="@style/FlzRace.FonteDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/flz_texto"
+            android:textSize="16sp" />
+    </LinearLayout>
+</FrameLayout>
